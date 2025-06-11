@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MediHub - Medical & Health Template">
+
+    <!-- ========== Page Title ========== -->
+    <title>Le Soiree - Nightclubs around Klang Valley</title>
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="assets/css/elegant-icons.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-fz5l2s5bWq5zjw9tTL2n1zDCa0gme2cF/4SRDCP3r77ruHR5t33Bj5G5b6I5I5d8j5zq9sDT2mR9zDMc08kR5Yg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ========== End Stylesheet ========== -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5/html5shiv.min.js"></script>
+      <script src="assets/js/html5/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ========== Google Fonts ========== -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet">
+    <title>Live Chat</title>
+    <style>
+        /* Styling for the Live Chat button */
+        #live-chat-button {
+            position: fixed;
+            bottom: 20px; /* Adjust the distance from the bottom as needed */
+            right: 50px; /* Adjust the distance from the right as needed */
+            padding: 10px 40px 10px;
+            background-color: #ce27d3;
+            color: rgb(248, 217, 14);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #live-chat-button i {
+            margin-right: 5px; /* Add spacing between the icon and text */
+        }
+        h3 {
+            color: yellow;
+        }
+        h4 {
+            color: yellow;
+        }
+         /* Style for the star rating container */
+         .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: left;
+        }
+
+        /* Style for the star icons */
+        .rating > span {
+            display: inline-block;
+            position: relative;
+            width: 1em;
+        }
+
+        /* Style for the empty star outline */
+        .rating > span:before {
+            content: "\2606";
+            position: absolute;
+            color: #ccc;
+        }
+
+        /* Style for the filled star */
+        .rating > span:after {
+            content: "\2605";
+            position: absolute;
+            color: gold;
+            left: 0;
+        }
+        .Address {
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+        }
+        /* Style for the map marker icon */
+        .map-marker {
+            color: yellow;
+        }
+
+        /* Style for the text */
+        .address-text {
+            color: yellow;
+        }
+        /* Style for the envelope icon */
+        .envelope-icon {
+            color: yellow;
+        }
+
+        /* Style for the email address */
+        .email-address {
+            color: yellow;
+        }
+        /* Style for the phone icon */
+        .phone-icon {
+            color: yellow;
+        }
+        .custom-svg {
+        width: 50px;
+        height: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button id="live-chat-button">
+        <i class="fas fa-comment"></i> Live Chat
+    </button>
+
+
+    <!-- Start Banner 
+    ============================================= -->
+    <div class="banner-area heading-exchange text-dark">
+        <div id="bootcarousel" class="carousel inc-top-heading slide carousel-fade animate_text" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner carousel-zoom">
+                <div class="item active">
+                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/LeSoiree_Home3.png);"></div>
+                    <div class="box-table">
+                        <div class="box-cell">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="content" style="display: flex; justify-content: flex-end; align-items: center; height: 140vh;">
+                                            <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" <a href="about-2.html" style="margin-right: 2cm;">Discover More</a>
+                                        </div>                                                                               
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/Fake\ Party\ Prank_15\ Minute\ Video.mp4);"></div>
+                    <div class="box-table">
+                        <div class="box-cell">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="content">
+                                            <h1 data-animation="animated fadeInUp">Find <span>The Best Club</span></h1>
+                                            <h2 data-animation="animated fadeInDown">Affordable price for a memorable night</h2>
+                                            <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="about-2.html">Discover More </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/People\ Dancing\ Club\ -\ Free\ HD\ Stock\ Footage\ -\ No\ Copyright\ -\ Nightclub\ Party\ Crowd.mp4);"></div>
+                    <div class="box-table">
+                        <div class="box-cell">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="content">
+                                            <h1 data-animation="animated fadeInUp"><span>Best</span> Website</h1>
+                                            <h2 data-animation="animated fadeInDown">Discover now and use the bundle discounts</h2>
+
+                                            <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="about-2.html">Discover More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Wrapper for slides -->
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#bootcarousel" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#bootcarousel" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!-- End Banner -->
+
+    <!-- Start About
+    ============================================= -->
+    <div id="about" class="about-area default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="about-items">
+                    <div class="col-md-6 inc-video">
+                        <div class="thumb">
+                        <img src="assets/img/club2.jpg" alt="Thumb">
+                        </div>
+                        </div>
+                        <div class="col-md-6 info">
+                        <h2>About Us.</h2>
+                        <h3>Vision</h3>
+                        <p>
+                            "To be the ultimate online platform for nightlife enthusiasts, connecting people to the hottest nightclubs and events worldwide, creating unforgettable experiences, and fostering a vibrant, inclusive nightlife community."
+                        </p>
+                        <h3>Mission</h3>
+                        <p>
+                            “Our commitment  is to continually enhance the nightlife experience by leveraging technology, innovation, and community engagement while celebrating the diversity and excitement of nightlife culture."
+                        <div class="bottom">
+                            <div class="video">
+                                <a href="assets/img/clubnight.mp4" class="popup-youtube relative theme video-play-button item-center">
+                                    <i class="fa fa-play"></i>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h4>Let’s see our intro video</h4>
+                                <p>
+                                  Party for your greatest night!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+
+    <!-- Start Services 
+    ============================================= -->
+    <div id="services" class="services-area inc-icon bg-gray carousel-shadow default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <img src="assets/img/4ae6ba6cb907f03e90de84f3a50c7cc1.svg" class="custom-svg">
+                        <br>
+                        <h2>Our <span>Feature</span></h2>
+                        <p>
+                            Features that we have from Le Soiree
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="services-items text-center services-carousel owl-carousel owl-theme">
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="info">
+                                <h4>
+                                    <a href="#">Directory</a>
+                                </h4>
+                                <div class="overlay">
+                                </div>
+                                <p>
+                                    Explore and indulge in a variety of the best nightclubs alongside special events around Klang Valley with us!
+                                </p>
+                                <a class="btn btn-theme border circle btn-md" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="info">
+                                <h4>
+                                    <a href="#">E-Hailing</a>
+                                </h4>
+                                <div class="overlay">
+                                </div>
+                                <p>
+                                With our prebook e-hailing service, you can confidently plan your journey, guaranteeing a punctual and stress-free arrival at your destination. Your seamless travel experience is our top priority. </p>
+                                <a class="btn btn-theme border circle btn-md" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="info">
+                                <h4>
+                                    <a href="#">Special Events</a>
+                                </h4>
+                                <div class="overlay">
+                                </div>
+                                <p>
+                                    Explore unique events and unforgettable experiences for a night out with your friends at our top-notch nightclubs through us. </p>
+                                </p>
+                                <a class="btn btn-theme border circle btn-md" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Services -->
+
+    <!-- Start Event
+    ============================================= -->
+    <div id="doctors" class="doctor-area default-padding bottom-less">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <img src="assets/img/4ae6ba6cb907f03e90de84f3a50c7cc1.svg" class="custom-svg">
+                        <br>
+                        <h2>NIGHTCLUBS of THE <span>Week</span></h2>
+                        <p>
+                            Our recomendation for you
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="doctor-items text-center">
+                    <!-- Single Item -->
+                    <div class="col-md-4 equal-height">
+                        <div class="item">
+                            <div class="thumb">
+                                <img src="assets/img/club5.jpg" alt="Thumb">
+                                <div class="overlay">
+                                    <a href="#"><i class="fas fa-plus"></i></a>
+                                </div>
+                                <div class="social">
+                                    <ul>
+                                        <li class="Address">
+                                            T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800 Petaling Jaya, Selangor.
+                                        </li>
+                                        <li class="facebook">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li class="instagram">
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h4>BAE Clubs</h4>
+                                <div class="rating">
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <h4>Available</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 equal-height">
+                        <div class="item">
+                            <div class="thumb">
+                                <img src="assets/img/club8.jpg" alt="Thumb">
+                                <div class="overlay">
+                                    <a href="#"><i class="fas fa-plus"></i></a>
+                                </div>
+                                <div class="social">
+                                    <ul>
+                                        <li class="Address">
+                                            T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800 Petaling Jaya, Selangor.
+                                        </li>
+                                        <li class="facebook">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li class="instagram">
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h4>Dragonfly</h4>
+                                <div class="rating">
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                <h4>Available</h4>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 equal-height">
+                        <div class="item">
+                            <div class="thumb">
+                                <img src="assets/img/club7.jpg" alt="Thumb">
+                                <div class="overlay">
+                                    <a href="#"><i class="fas fa-plus"></i></a>
+                                </div>
+                                <div class="social">
+                                    <ul>
+                                        <li class="Address">
+                                            T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800 Petaling Jaya, Selangor.
+                                        </li>
+                                        <li class="facebook">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li class="instagram">
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h4>PLAY Club at The Roof</h4>
+                                <div class="rating">
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <h4>Available</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Doctors -->
+
+    <!-- Start Event
+    ============================================= -->
+    <div id="doctors" class="doctor-area default-padding bottom-less">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <img src="assets/img/4ae6ba6cb907f03e90de84f3a50c7cc1.svg" class="custom-svg">
+                        <br>
+                        <h2> SPECIAL <span> Events </span></h2>
+                        <p>
+                            Our recomendation for you
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="doctor-items text-center">
+                    <!-- Single Item -->
+                    <div class="col-md-4 equal-height">
+                        <div class="item">
+                            <div class="thumb">
+                                <img src="assets/img/club5.jpg" alt="Thumb">
+                                <div class="overlay">
+                                    <a href="#"><i class="fas fa-plus"></i></a>
+                                </div>
+                                <div class="social">
+                                    <ul>
+                                        <li class="Address">
+                                            T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800 Petaling Jaya, Selangor.
+                                        </li>
+                                        <li class="facebook">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li class="instagram">
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h4>BAE Clubs</h4>
+                                <div class="rating">
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <h4>Available</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 equal-height">
+                        <div class="item">
+                            <div class="thumb">
+                                <img src="assets/img/club8.jpg" alt="Thumb">
+                                <div class="overlay">
+                                    <a href="#"><i class="fas fa-plus"></i></a>
+                                </div>
+                                <div class="social">
+                                    <ul>
+                                        <li class="Address">
+                                            T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800 Petaling Jaya, Selangor.
+                                        </li>
+                                        <li class="facebook">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li class="instagram">
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h4>Dragonfly</h4>
+                                <div class="rating">
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                <h4>Available</h4>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 equal-height">
+                        <div class="item">
+                            <div class="thumb">
+                                <img src="assets/img/club7.jpg" alt="Thumb">
+                                <div class="overlay">
+                                    <a href="#"><i class="fas fa-plus"></i></a>
+                                </div>
+                                <div class="social">
+                                    <ul>
+                                        <li class="Address">
+                                            T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800 Petaling Jaya, Selangor.
+                                        </li>
+                                        <li class="facebook">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li class="instagram">
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h4>PLAY Club at The Roof</h4>
+                                <div class="rating">
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <h4>Available</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Doctors -->
+
+    <!-- Start Testimonials 
+    ============================================= -->
+    <div id="testimonials" class="testimonials-area carousel-shadow bg-gray default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <img src="assets/img/4ae6ba6cb907f03e90de84f3a50c7cc1.svg" class="custom-svg">
+                        <br>
+                        <h2>The <span> Reviews</span></h2>
+                        <p>
+                         Let's see what are they thought about Le Soiree Website
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="testimonial-items testimonial-carousel owl-carousel owl-theme">
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="content">
+                                <p>
+                                    Le Soiree impresses with its extensive database of nightclubs in the Klang Valley area. Whether you're looking for upscale lounges, lively dance clubs, or cozy bars, this platform provides a comprehensive list of options to suit various preferences and moods. Each nightclub listing includes detailed information, such as location, hours of operation, music genres, and customer reviews, enabling users to make informed decisions.
+                                </p>
+                            </div>
+                            <div class="provider">
+                                <div class="thumb">
+                                    <img src="assets/img/people3.jpg" alt="Thumb">
+                                </div>
+                                <div class="info">
+                                    <h4>Angle Natasha</h4>
+                                    <h5>Le Soiree of <span>user</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="content">
+                                <p>
+                                 The search filters on Le Soiree are a standout feature. Users can filter nightclubs based on criteria like location, music genre, price range, and even special events or promotions. These filters streamline the search process, ensuring that users can easily discover the perfect nightlife destination tailored to their specific preferences.
+                                </p>
+                            </div>
+                            <div class="provider">
+                                <div class="thumb">
+                                    <img src="assets/img/people2.jpg" alt="Thumb">
+                                </div>
+                                <div class="info">
+                                    <h4>John Abraham</h4>
+                                    <h5>Le Soiree <span>user</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="content">
+                                <p>
+                                Le Soiree encourages community engagement by allowing users to leave reviews and ratings for the nightclubs they visit. This feature is invaluable for individuals seeking authentic insights into the atmosphere, service quality, and overall experience at each venue. Reading reviews from fellow partygoers adds a personal touch to the decision-making process.
+                                </p>
+                            </div>
+                            <div class="provider">
+                                <div class="thumb">
+                                    <img src="assets/img/people1.jpg" alt="Thumb">
+                                </div>
+                                <div class="info">
+                                    <h4>Kriti Sairi</h4>
+                                    <h5>Le Soiree <span>user</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Testimonials -->
+
+<!-- Start Newsletter 
+    ============================================= -->
+    <div class="newsletter-area default-padding shadow dark bg-fixed text-center text-light" style="background-image: url(assets/img/club3.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Subscribe For Get Update</h4>
+                    <h2>Let Us Give You Update.</h2>
+                    <form action="#">
+                        <div class="input-group stylish-input-group">
+                            <input type="email" name="email" class="form-control" placeholder="Enter your e-mail here">
+                            <button type="submit">
+                                <i class="fa fa-paper-plane"></i>
+                            </button>  
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Newsletter -->
+
+    <!-- Start Contact
+    ============================================= -->
+    <div class="top-entry-area bg-gray text-center">
+        <div class="container">
+            <div class="row">
+                <div class="item-box">
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h4>Location</h4>
+                            <p>
+                                Taylor's University, Selangor, Petaling Jaya.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <i class="fas fa-phone"></i>
+                            <h4>Customer Service</h4>
+                            <h2>+123 456 7890</h2>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <i class="fas fa-envelope-open"></i>
+                            <h4>Email</h4>
+                            <p>
+                                LeSoiree@gmail.com<br>LeSoiree_Admin@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- jQuery Frameworks
+    ============================================= -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/equal-height.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/modernizr.custom.13711.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/count-to.js"></script>
+    <script src="assets/js/YTPlayer.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/bootsnav.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

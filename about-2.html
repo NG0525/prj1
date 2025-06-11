@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MediHub - Medical & Health Template">
+
+    <!-- ========== Page Title ========== -->
+    <title>Le Soiree - Nightclubs around Klang Valley</title>
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="assets/css/elegant-icons.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5/html5shiv.min.js"></script>
+      <script src="assets/js/html5/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ========== Google Fonts ========== -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet">
+    <style>
+        /* Style for the map marker icon */
+        .map-marker {
+            color: yellow;
+        }
+
+        /* Style for the text */
+        .address-text {
+            color: yellow;
+        }
+
+        /* Style for the envelope icon */
+        .envelope-icon {
+            color: yellow;
+        }
+
+        /* Style for the email address */
+        .email-address {
+            color: yellow;
+        }
+
+        /* Style for the phone icon */
+        .phone-icon {
+            color: yellow;
+        }
+
+        /* Style for the phone number */
+        .phone-number {
+            color: yellow;
+        }
+
+        h3 {
+            color: yellow;
+        }
+
+        h4 {
+            color: yellow;
+        }
+
+        /* Style for the star rating container */
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: left;
+        }
+
+        /* Style for the star icons */
+        .rating>span {
+            display: inline-block;
+            position: relative;
+            width: 1em;
+        }
+
+        /* Style for the empty star outline */
+        .rating>span:before {
+            content: "\2606";
+            position: absolute;
+            color: #ccc;
+        }
+
+        /* Style for the filled star */
+        .rating>span:after {
+            content: "\2605";
+            position: absolute;
+            color: gold;
+            left: 0;
+        }
+
+        .Address {
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+        }
+
+        /* Adjust the color and length of the track */
+        input[type="range"] {
+            width: 20%;
+            /* Change the length as needed */
+        }
+
+        .custom-svg {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* CSS to make the line hot pink */
+        #selectedRange {
+            color: rgb(217, 84, 244);
+            /* This sets the text color to hot pink */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Discount Start -->
+    <div class="discount-container">
+        <div class="discount">
+            <span class="discount-label">Exclusive Friday Night Offer: </span>
+            <span class="discount-value">
+                Join us this Friday for an unforgettable Ladies Night at Le Soiree and enjoy a fantastic
+                <a href="index-2.html">40% off</a>!
+            </span>
+        </div>
+    </div>
+    <!-- Discount Ends -->
+
+    <!-- Start Header Top 
+    ============================================= -->
+    <div class="top-bar-area inline inc-border">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 address-info text-left">
+                    <div class="info box">
+                        <ul>
+                            <li>
+                                <i class="fas fa-map-marker-alt map-marker"></i>
+                                <span class="address-text">California, TX 70240</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope-open envelope-icon"></i>
+                                <span class="email-address">Info@gmail.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone phone-icon"></i>
+                                <span class="phone-number">+123 456 7890</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 social text-right">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Header Top -->
+
+    <!-- Start Breadcrumb 
+    ============================================= -->
+    <div class="breadcrumb-area shadow dark bg-fixed text-light" style="background-image: url(assets/img/club3.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Discover</h1>
+                </div>
+                <div class="col-md-6 text-right">
+                    <ul class="breadcrumb">
+                        <li><a href="index-op.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="index-2.html">Bundle Discount</a></li>
+                        <li class="active">Discover</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Start Doctors 
+    ============================================= -->
+    <div class="doctor-area bg-gray carousel-shadow default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <img src="assets/img/4ae6ba6cb907f03e90de84f3a50c7cc1.svg" class="custom-svg">
+                        <br>
+                        <h2>Discovery <span>Page</span></h2>
+                        <p>
+                            Discover THE BEST Nightclub around Klang Valley
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <h5>Select a Price Range:</h5>
+            <input type="range" id="priceRange" name="priceRange" min="50" max="100" value="50">
+            <p>Selected Price Range: <span id="selectedRange">RM 50</span></p>
+            <script>
+                const priceRange = document.getElementById("priceRange");
+                const selectedRange = document.getElementById("selectedRange");
+
+                priceRange.addEventListener("input", function () {
+                    selectedRange.textContent = "RM " + priceRange.value;
+                });
+            </script>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="doctor-items doctor-carousel owl-carousel owl-theme text-center">
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="thumb">
+                                <img src="assets/img/club5.jpg" alt="Thumb">
+                                <div class="overlay">
+                                    <a href="#"><i class="fas fa-plus"></i></a>
+                                </div>
+                                <div class="social">
+                                    <ul>
+                                        <li class="Address">
+                                            T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800
+                                            Petaling Jaya, Selangor.
+                                        </li>
+                                        <li class="facebook">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li class="instagram">
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                        <li class="linkedin">
+                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h4>NIGHT Clubs</h4>
+                                <div class="rating">
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <h4>Available</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="thumb">
+                                <img src="assets/img/club5.jpg" alt="Thumb">
+                                <div class="overlay">
+                                    <a href="about.html"><i class="fas fa-plus"></i></a>
+                                </div>
+                                <div class="social">
+                                    <ul>
+                                        <li class="Address">
+                                            T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800
+                                            Petaling Jaya, Selangor.
+                                        </li>
+                                        <li class="facebook">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li class="instagram">
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                        <li class="linkedin">
+                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h4>NIGHT Clubs</h4>
+                                <div class="rating">
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <h4>Available</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="thumb">
+                                <img src="assets/img/club5.jpg" alt="Thumb">
+                                <div class="overlay">
+                                    <a href="#"><i class="fas fa-plus"></i></a>
+                                </div>
+                                <div class="social">
+                                    <ul>
+                                        <li class="Address">
+                                            T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800
+                                            Petaling Jaya, Selangor.
+                                        </li>
+                                        <li class="facebook">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li class="instagram">
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                        <li class="linkedin">
+                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h4>NIGHT Clubs</h4>
+                                <div class="rating">
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <h4>Available</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="thumb">
+                                <img src="assets/img/club5.jpg" alt="Thumb">
+                                <div class="overlay">
+                                    <a href="#"><i class="fas fa-plus"></i></a>
+                                </div>
+                                <div class="social">
+                                    <ul>
+                                        <li class="Address">
+                                            T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800
+                                            Petaling Jaya, Selangor.
+                                        </li>
+                                        <li class="facebook">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li class="instagram">
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                        <li class="linkedin">
+                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h4>NIGHT Clubs</h4>
+                                <div class="rating">
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <h4>Available</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="thumb">
+                                <img src="assets/img/club5.jpg" alt="Thumb">
+                                <div class="overlay">
+                                    <a href="#"><i class="fas fa-plus"></i></a>
+                                </div>
+                                <div class="social">
+                                    <ul>
+                                        <li class="Address">
+                                            T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800
+                                            Petaling Jaya, Selangor.
+                                        </li>
+                                        <li class="facebook">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li class="instagram">
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                        <li class="linkedin">
+                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h4>NIGHT Clubs</h4>
+                                <div class="rating">
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <h4>Available</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Doctors -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="site-heading text-center">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="doctor-items doctor-carousel owl-carousel owl-theme text-center">
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/img/club11.jpg" alt="Thumb">
+                            <div class="overlay">
+                                <a href="#"><i class="fas fa-plus"></i></a>
+                            </div>
+                            <div class="social">
+                                <ul>
+                                    <li class="Address">
+                                        T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800
+                                        Petaling Jaya, Selangor.
+                                    </li>
+                                    <li class="facebook">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li class="instagram">
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li class="linkedin">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>NIGHT Clubs</h4>
+                            <div class="rating">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <h4>Available</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/img/club11.jpg" alt="Thumb">
+                            <div class="overlay">
+                                <a href="#"><i class="fas fa-plus"></i></a>
+                            </div>
+                            <div class="social">
+                                <ul>
+                                    <li class="Address">
+                                        T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800
+                                        Petaling Jaya, Selangor.
+                                    </li>
+                                    <li class="facebook">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li class="instagram">
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li class="linkedin">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>NIGHT Clubs</h4>
+                            <div class="rating">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <h4>Available</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/img/club11.jpg" alt="Thumb">
+                            <div class="overlay">
+                                <a href="#"><i class="fas fa-plus"></i></a>
+                            </div>
+                            <div class="social">
+                                <ul>
+                                    <li class="Address">
+                                        T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800
+                                        Petaling Jaya, Selangor.
+                                    </li>
+                                    <li class="facebook">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li class="instagram">
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li class="linkedin">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>NIGHT Clubs</h4>
+                            <div class="rating">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <h4>Available</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/img/club11.jpg" alt="Thumb">
+                            <div class="overlay">
+                                <a href="#"><i class="fas fa-plus"></i></a>
+                            </div>
+                            <div class="social">
+                                <ul>
+                                    <li class="Address">
+                                        T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800
+                                        Petaling Jaya, Selangor.
+                                    </li>
+                                    <li class="facebook">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li class="instagram">
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li class="linkedin">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>NIGHT Clubs</h4>
+                            <div class="rating">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <h4>Available</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/img/club11.jpg" alt="Thumb">
+                            <div class="overlay">
+                                <a href="#"><i class="fas fa-plus"></i></a>
+                            </div>
+                            <div class="social">
+                                <ul>
+                                    <li class="Address">
+                                        T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800
+                                        Petaling Jaya, Selangor.
+                                    </li>
+                                    <li class="facebook">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li class="instagram">
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li class="linkedin">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>NIGHT Clubs</h4>
+                            <div class="rating">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <h4>Available</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="site-heading text-center">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="doctor-items doctor-carousel owl-carousel owl-theme text-center">
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/img/club11.jpg" alt="Thumb">
+                            <div class="overlay">
+                                <a href="#"><i class="fas fa-plus"></i></a>
+                            </div>
+                            <div class="social">
+                                <ul>
+                                    <li class="Address">
+                                        T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800
+                                        Petaling Jaya, Selangor.
+                                    </li>
+                                    <li class="facebook">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li class="instagram">
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li class="linkedin">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>NIGHT Clubs</h4>
+                            <div class="rating">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <h4>Available</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/img/club11.jpg" alt="Thumb">
+                            <div class="overlay">
+                                <a href="#"><i class="fas fa-plus"></i></a>
+                            </div>
+                            <div class="social">
+                                <ul>
+                                    <li class="Address">
+                                        T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800
+                                        Petaling Jaya, Selangor.
+                                    </li>
+                                    <li class="facebook">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li class="instagram">
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li class="linkedin">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>NIGHT Clubs</h4>
+                            <div class="rating">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <h4>Available</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/img/club11.jpg" alt="Thumb">
+                            <div class="overlay">
+                                <a href="#"><i class="fas fa-plus"></i></a>
+                            </div>
+                            <div class="social">
+                                <ul>
+                                    <li class="Address">
+                                        T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800
+                                        Petaling Jaya, Selangor.
+                                    </li>
+                                    <li class="facebook">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li class="instagram">
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li class="linkedin">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>NIGHT Clubs</h4>
+                            <div class="rating">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <h4>Available</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/img/club11.jpg" alt="Thumb">
+                            <div class="overlay">
+                                <a href="#"><i class="fas fa-plus"></i></a>
+                            </div>
+                            <div class="social">
+                                <ul>
+                                    <li class="Address">
+                                        T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800
+                                        Petaling Jaya, Selangor.
+                                    </li>
+                                    <li class="facebook">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li class="instagram">
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li class="linkedin">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>NIGHT Clubs</h4>
+                            <div class="rating">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <h4>Available</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/img/club11.jpg" alt="Thumb">
+                            <div class="overlay">
+                                <a href="#"><i class="fas fa-plus"></i></a>
+                            </div>
+                            <div class="social">
+                                <ul>
+                                    <li class="Address">
+                                        T-02, Penthouse Centrepoint No, 3, Lebuh Bandar Utama, Bandar Utama, 47800
+                                        Petaling Jaya, Selangor.
+                                    </li>
+                                    <li class="facebook">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li class="instagram">
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li class="linkedin">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>NIGHT Clubs</h4>
+                            <div class="rating">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <h4>Available</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Start Fun Factor
+    ============================================= -->
+    <div class="fun-fact-area default-padding shadow light text-center bg-fixed text-light"
+        style="background-image: url(assets/img/le.png);">
+        <div class="container">
+
+        </div>
+    </div>
+    <!-- End Fun Factor -->
+
+    <!-- Start Contact
+    ============================================= -->
+    <div class="top-entry-area bg-gray text-center">
+        <div class="container">
+            <div class="row">
+                <div class="item-box">
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h4>Location</h4>
+                            <p>
+                                Taylor's University, Selangor, Petaling Jaya.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <i class="fas fa-phone"></i>
+                            <h4>Customer Service</h4>
+                            <h2>+123 456 7890</h2>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <i class="fas fa-envelope-open"></i>
+                            <h4>Email</h4>
+                            <p>
+                                LeSoiree@gmail.com<br>LeSoiree_Admin@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery Frameworks
+    ============================================= -->
+        <script src="assets/js/jquery-1.12.4.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/equal-height.min.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/jquery.easing.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/modernizr.custom.13711.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/js/count-to.js"></script>
+        <script src="assets/js/YTPlayer.min.js"></script>
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <script src="assets/js/bootsnav.js"></script>
+        <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

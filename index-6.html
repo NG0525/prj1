@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MediHub - Medical & Health Template">
+
+    <!-- ========== Page Title ========== -->
+    <title>Le Soiree - Nightclubs around Klang Valley</title>
+    <script src="https://cdn.jsdelivr.net/npm/quagga@0.12.1/dist/quagga.min.js"></script>
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="assets/css/elegant-icons.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5/html5shiv.min.js"></script>
+      <script src="assets/js/html5/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ========== Google Fonts ========== -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet">
+    <style>
+        h4 {
+            color: yellow;
+        }
+        /* Style for the map marker icon */
+        .map-marker {
+            color: yellow;
+        }
+
+        /* Style for the text */
+        .address-text {
+            color: yellow;
+        }
+        /* Style for the envelope icon */
+        .envelope-icon {
+            color: yellow;
+        }
+
+        /* Style for the email address */
+        .email-address {
+            color: yellow;
+        }
+         /* Style for the phone icon */
+         .phone-icon {
+            color: yellow;
+        }
+
+        /* Style for the phone number */
+        .phone-number {
+            color: yellow;
+        }
+        #camera-preview {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+    
+</head>
+
+<body>
+  
+    <div class="top-bar-area inline inc-border">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 address-info text-left">
+                    <div class="info box">
+                        <ul>
+                            <li>
+                                <i class="fas fa-map-marker-alt map-marker"></i>
+                                <span class="address-text">California, TX 70240</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope-open envelope-icon"></i>
+                                <span class="email-address">Info@gmail.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone phone-icon"></i>
+                                <span class="phone-number">+123 456 7890</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 social text-right">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Header Top -->
+
+     <!-- Start Breadcrumb 
+    ============================================= -->
+    <div class="breadcrumb-area shadow dark bg-fixed text-light" style="background-image: url(assets/img/club3.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Payment</h1>
+                </div>
+                <div class="col-md-12 text-right">
+                    <ul class="breadcrumb">
+                        <li><a href="index-op.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="index-2.html">Bundle Discount</a></li>
+                        <li><a href="about-2.html">Discover</a></li>
+                        <li><a href="index-8.html">RSVP</a></li>
+                        <li class="active">Payment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+    <!-- Start Features
+    ============================================= -->
+    <div class="features-area default-padding bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 appoinment">
+                    <div class="appoinment-box">
+                        <div class="heading">
+                            <h4>To ensure the security of your payment and age verification safety</h4>
+                            <h2>Scan Your ID</h2>
+                        </div>
+                        <form action="#" 
+                        id="id-verification-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="verify-method">Select your ID:</label>
+                    <select id="verify-method">
+                        <option value="passport">Passport</option>
+                        <option value="mykad">MyKad</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button type="button" onclick="startIDScan()">Start ID Scan</button>
+        <button type="button" onclick="stopIDScan()">Exit</button>
+    </form>
+    <div id="camera-preview">
+        <video id="scanner" autoplay="true"></video>
+    </div>
+    <div id="scan-result"></div>
+
+    <script>
+        let isScanning = false;
+        let videoStream;
+
+        function startIDScan() {
+            if (isScanning) {
+                return;
+            }
+
+            const selectElement = document.getElementById("verify-method");
+            const selectedOption = selectElement.options[selectElement.selectedIndex].value;
+
+            const videoElement = document.getElementById("scanner");
+            const scanResultElement = document.getElementById("scan-result");
+
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: true })
+                    .then(function(stream) {
+                        videoElement.srcObject = stream;
+                        videoElement.play();
+                        isScanning = true;
+                        videoStream = stream;
+                        scanResultElement.textContent = "Scanning...";
+
+                        Quagga.init({
+                            inputStream: {
+                                name: "Live",
+                                type: "LiveStream",
+                                target: videoElement,
+                            },
+                            decoder: {
+                                readers: ["code_128_reader", "ean_reader"],
+                            },
+                        }, function(err) {
+                            if (err) {
+                                console.error(err);
+                                return;
+                            }
+                            Quagga.start();
+                        });
+
+                        Quagga.onDetected(function(result) {
+                            const scannedID = result.codeResult.code;
+                            scanResultElement.textContent = "Scanned ID: " + scannedID;
+                            verifyIDFormat(selectedOption, scannedID);
+                        });
+                    })
+                    .catch(function(error) {
+                        console.error("Error accessing the camera: " + error);
+                    });
+            } else {
+                console.error("getUserMedia not supported in this browser.");
+            }
+        }
+
+        function stopIDScan() {
+            isScanning = false;
+            if (videoStream) {
+                videoStream.getTracks().forEach(function(track) {
+                    track.stop();
+                });
+            }
+            Quagga.stop();
+            document.getElementById("scan-result").textContent = "Scan Stopped.";
+        }
+
+        function verifyIDFormat(selectedOption, scannedID) {
+            let regexPattern;
+            let errorMessage;
+            
+            if (selectedOption === "passport") {
+                regexPattern = /^[A-Za-z0-9]+$/;
+                errorMessage = "Passport format is not valid. It should contain only letters and numbers.";
+            } else if (selectedOption === "mykad") {
+                regexPattern = /^[0-9]{12}$/;
+                errorMessage = "MyKad format is not valid. It should be a 12-digit number.";
+            } else {
+                errorMessage = "Invalid selection.";
+            }
+
+            if (regexPattern && scannedID && regexPattern.test(scannedID)) {
+                document.getElementById("scan-result").textContent += " | ID format is valid!";
+            } else {
+                document.getElementById("scan-result").textContent += " | " + errorMessage;
+            }
+        }
+    </script>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+                            <div class="features-area default-padding bg-gray">
+                            <div class="container">
+                            <div class="row">
+                            <div class="col-md-10 appoinment">
+                            <div class="appoinment-box">
+                            <div class="heading">
+                            <h4>Payment</h4>
+                            <h2>Transfer to this bank number:123456789102</h2>
+                            </div>
+                            <form action="#">
+                            <input type="text" id="discount-code" placeholder="Enter Discount Code">
+                           
+                            <a data-animation="animated slideInUp" class="btn btn-theme border btn-md" href="index-op-6.html">Scan receipt</a>
+                            <div id="results-Receipt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>   
+       
+          
+ <!-- Start Contact
+    ============================================= -->
+    <div class="top-entry-area bg-gray text-center">
+        <div class="container">
+            <div class="row">
+                <div class="item-box">
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h4>Location</h4>
+                            <p>
+                                Taylor's University, Selangor, Petaling Jaya.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <i class="fas fa-phone"></i>
+                            <h4>Customer Service</h4>
+                            <h2>+123 456 7890</h2>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <i class="fas fa-envelope-open"></i>
+                            <h4>Email</h4>
+                            <p>
+                                LeSoiree@gmail.com<br>LeSoiree_Admin@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+            </div>
+        </div>
+        
+      
+    <!--Thank You-->
+
+    <!-- jQuery Frameworks
+    ============================================= -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/equal-height.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/modernizr.custom.13711.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/count-to.js"></script>
+    <script src="assets/js/YTPlayer.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/bootsnav.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

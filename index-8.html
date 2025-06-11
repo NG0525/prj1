@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MediHub - Medical & Health Template">
+
+    <!-- ========== Page Title ========== -->
+    <title>Le Soiree - Nightclubs around Klang Valley</title>
+
+    <script defer src="./assets/face-api.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script defer src="./assets/face_detect_cam.js"></script>
+    <script defer src="./assets/stripe_payment.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="assets/css/elegant-icons.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- ========== End Stylesheet ========== -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5/html5shiv.min.js"></script>
+      <script src="assets/js/html5/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ========== Google Fonts ========== -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet">
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+        }
+
+        .test {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #profile_pic {
+            display: none;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            position: relative;
+            margin-top: -20px;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        /* Style for the star rating container */
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: left;
+        }
+
+        /* Style for the star icons */
+        .rating>span {
+            display: inline-block;
+            position: relative;
+            width: 1em;
+        }
+
+        /* Style for the empty star outline */
+        .rating>span:before {
+            content: "\2606";
+            position: absolute;
+            color: #ccc;
+        }
+
+        /* Style for the filled star */
+        .rating>span:after {
+            content: "\2605";
+            position: absolute;
+            color: gold;
+            left: 0;
+        }
+
+        /* Style for the map marker icon */
+        .map-marker {
+            color: yellow;
+        }
+
+
+
+        /* Common style for input fields */
+        .input-fields {
+            color: black;
+            width: 100%;
+            margin: 10px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .picture-button {
+            /* background-color: black; */
+            background-color: transparent;
+            /* border: 1px solid white !important; */
+            color: white;
+            text-align: center;
+        }
+
+        .picture-button:hover {
+            /* background-color: rgb(225, 44, 238); */
+            background-color: white;
+            color: black;
+            font-weight: bolder;
+        }
+
+        .payment {
+            background-color: transparent;
+            /* border: 1px solid white !important; */
+            color: white;
+            text-align: center;
+        }
+
+        .payment:hover {
+            background-color: lightgreen;
+            font-weight: bolder;
+            color: darkgreen;
+        }
+
+
+
+        /* Style for the envelope icon */
+        .envelope-icon {
+            color: yellow;
+        }
+
+        /* Style for the email address */
+        .email-address {
+            color: yellow;
+            width: 100%;
+        }
+
+        /* Style for the phone icon */
+        .phone-icon {
+            color: yellow;
+        }
+
+        /* Style for the phone number */
+        .phone-number {
+            color: yellow;
+        }
+
+        h3 {
+            color: yellow;
+        }
+
+        h4 {
+            color: yellow;
+        }
+
+        /* Style for the plus and minus buttons */
+        .quantity-button {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            background-color: #f9f11f;
+            color: rgb(4, 2, 2);
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Style for the quantity input field */
+        .quantity-input {
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Style for text input fields */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        /* Style for the textarea */
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 3px 0;
+            font-size: 16px;
+        }
+
+        #book {
+            width: 100%;
+            background-color: rgb(225, 44, 238);
+            /* Set the button background color to pink */
+            border: none;
+            /* Remove the button border */
+            color: rgb(234, 241, 43);
+            /* Text color */
+            padding: 10px 20px;
+            /* Padding around the text */
+            font-size: 16px;
+            /* Text size */
+            cursor: pointer;
+            /* Change cursor on hover */
+        }
+
+        /* Apply a hover effect */
+        #book:hover {
+            background-color: #ff66b2;
+            /* Change background color on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar-area inline inc-border">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 address-info text-left">
+                    <div class="info box">
+                        <ul>
+                            <li>
+                                <i class="fas fa-map-marker-alt map-marker"></i>
+                                <span class="address-text">California, TX 70240</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope-open envelope-icon"></i>
+                                <span class="email-address">Info@gmail.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone phone-icon"></i>
+                                <span class="phone-number">+123 456 7890</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 social text-right">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Header Top -->
+
+    <!-- Start Breadcrumb 
+    ============================================= -->
+    <div class="breadcrumb-area shadow dark bg-fixed text-light" style="background-image: url(assets/img/club3.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>RSVP</h1>
+                </div>
+                <div class="col-md-6 text-right">
+                    <ul class="breadcrumb">
+                        <li><a href="index-op.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="index-2.html">Bundle Discount</a></li>
+                        <li><a href="about-2.html">Discover</a></li>
+                        <li class="active">RSVP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Start Appoinment
+    ============================================= -->
+    <div class="container" style="background-image: url(assets/img/club11.jpg);">
+        <div class="container">
+            <div class="row">
+                <!-- Start Appoinment Form -->
+                <div class="col-md-6 col-md-offset-6 appoinment">
+                    <div class="appoinment-box">
+                        <div class="appointment-schedule">
+                            <ul>
+                                <li>Sat - Tue <span>8:00 - 15:30</span></li>
+                                <li>Wed - Fri <span>10:00 - 16:30</span></li>
+                            </ul>
+                        </div>
+                        <div class="heading">
+                            <h2>Night CLUBS RSVP</h2>
+                        </div>
+                        <form action="#">
+                            <div class="row">
+                                <div class="rating">
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <h5>Available</h5>
+                                </div>
+                                <div class="col-md-12">
+                                    <a data-animation="animated slideInUp" class="btn btn-theme border btn-md"
+                                        href="index-6.html">Payment</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- End Appoinment Form -->
+            </div>
+        </div>
+    </div>
+
+    <!-- End Appoinment -->
+
+    <!-- Start Contact Area
+    ============================================= -->
+    <div id="contact" class="contact-area bg-gray text-center default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="contact-items">
+                    <div class="col-md-8 col-md-offset-2 contact-form">
+                        <div class="site-heading text-center">
+                            <h2>Fill <span>Up</span></h2>
+
+                            <!-- Code test start here -->
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form class="form-group" id="rsvp_form">
+
+                                        <!-- Personal info section -->
+                                        <h4 style="text-align: left;">Fill Personal Information</h4>
+
+                                        <!-- First name -->
+                                        <p class="input-fields" style="color: white;">First Name</p>
+                                        <input class="input-fields" type="text" id="first-name" placeholder="e.g: John">
+
+                                        <!-- Last name -->
+                                        <p class="input-fields" style="color: white;">Last Name</p>
+                                        <input class="input-fields" type="text" id="last-name" placeholder="e.g: Doe">
+
+
+                                        <!-- Email -->
+                                        <p class="input-fields" style="color: white;">Email Address</p>
+                                        <input class="input-fields" type="email" id="email"
+                                            placeholder="e.g: john.doe@gmail.com">
+
+                                        <!-- Phone Number -->
+                                        <p class="input-fields" style="color: white;">Phone Number</p>
+                                        <input class="input-fields" type="tel" id="phone" placeholder="e.g: 0123456789">
+
+                                        <!-- Date of Birth -->
+                                        <!-- <label for="date-of-birth">Date of Birth:</label> -->
+                                        <p class="input-fields" style="color: white;">Date of Birth</p>
+                                        <input class="input-fields" type="date" id="date-of-birth">
+
+                                        <!-- Gender -->
+                                        <p class="input-fields" style="color: white;">Gender</p>
+                                        <select class="input-fields" id="gender">
+                                            <option value="Unselected" disabled selected>Choose Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+
+                                        <!-- Profile info Pic -->
+                                        <p class="input-fields" style="color: white;">Take Profle Picture (Must
+                                            Include Your Face)
+                                        </p>
+
+                                        <div class="test" id="container">
+                                            <video class="" id="video" style="display: none; " autoplay muted></video>
+                                            <img class="" src="" value="" id="profile_pic"></img>
+
+                                        </div>
+
+                                        <input class="input-fields picture-button" type="button" id="takePic"
+                                            value="Take Picture">
+
+
+                                        <!-- Passport -->
+                                        <p class="input-fields" style="color: white;">Upload Passport (for Identity
+                                            Verification)
+                                        </p>
+                                        <input class="input-fields" style="color: white;" type="file" id="passport_img"
+                                            accept="image/*">
+                                        <br>
+                                        <br>
+
+                                        <!-- RSVP section -->
+                                        <h4 style="text-align: left;">Fill RSVP Information</h4>
+
+                                        <!-- Number of guests -->
+                                        <p class="input-fields" style="color: white;">Number of People</p>
+                                        <input class="input-fields" type="number" id="guests" value="1" min="1">
+
+                                        <!-- RSVP Date -->
+                                        <!-- <label for="date-of-birth">Date of Birth:</label> -->
+                                        <p class="input-fields" style="color: white;">RSVP Date (Closed: Mon, Tue)
+                                        </p>
+                                        <input class="input-fields" type="date" id="rsvp_date">
+
+
+                                        <!-- Chech in time -->
+                                        <p class="input-fields" style="color: white;">Choose Check In Time
+                                        </p>
+                                        <select class="input-fields" id="rsvp_time">
+                                            <option value="12:00 AM - 04:00 AM">12:00 AM - 04:00 AM</option>
+                                            <option value="09:00 PM - 12:00 AM">09:00 PM - 12:00 AM</option>
+                                        </select>
+
+                                        <!-- Custom Message -->
+                                        <p class="input-fields" style="color: white;"> Custom Message </p>
+                                        <textarea id="message"
+                                            placeholder="Please provide your occation, or if you have any special requests."></textarea>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <!-- Patment section -->
+                                        <h4 style="text-align: left;">Payment for rsvp</h4>
+                                        <!-- <br> -->
+                                        <!-- Payment button -->
+                                        <p class="input-fields" style="color: white;">Payment Amount for Online RSVP
+                                            Reservations: $10 </p>
+                                        <input class="input-fields payment" type="button" id="payment_method"
+                                            value="Make Payment">
+                                        <br>
+                                        <br>
+                                        <!-- Note -->
+                                        <p class="input-fields" style="color: white; margin: 0;">
+                                            <u style="font-weight: bolder; font-style: italic;">Note</u> :
+                                            Before submiting your RSVP, make sure you have filled up all the fields
+                                            with the correct information, and have made the reservatiobn payment.
+                                        </p>
+                                        <br>
+                                        <br>
+                                        <!-- Agree to correct info -->
+                                        <div style="display: flex; align-items: center; height: 5vh;">
+                                            <input style="margin-right: 5px;" type="checkbox" id="terms-checkbox">
+                                            <p style="color: white; margin: 0; font-size: 18px;">I agree to have
+                                                filled all correct information, and made the RSVP payment</p>
+                                        </div>
+
+                                        <!-- Agree to terms of service -->
+                                        <div style="display: flex; align-items: center;  height: 5vh;">
+                                            <input style="margin-right: 5px;" type="checkbox" id="terms-checkbox">
+                                            <p style="color: white; margin: 0; font-size: 18px;">I agree to the
+                                                Terms of Service</p>
+                                        </div>
+                                        <br>
+
+                                        <!-- 
+                                        <br>
+                                        <br> -->
+                                        <!-- Form submit button -->
+                                        <button type="submit" id="book">Book RSVP</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- Code test end here -->
+                            <div id="qrCodeDiv"></div>
+                            <script>
+                                // Function to send file to server and get date of birth
+                                function sendPassportToServer() {
+                                    return new Promise(function (resolve, reject) {
+                                        // Get the file input element for passport image
+                                        var passportFile = document.getElementById('passport_img');
+
+                                        // Renaming passport image to email + phone 
+                                        var email = String(document.getElementById('email').value);
+                                        var phone = String(document.getElementById('phone').value);
+                                        var emailCleaned = email.replace(/\W+/g, "");
+                                        var phoneCleaned = phone.replace(/\W+/g, "");
+                                        var passport_name = emailCleaned + "_" + phoneCleaned + ".jpg";
+
+                                        // Check if a file is selected
+                                        if (passportFile.files.length > 0) {
+                                            // Create FormData object to send files with fetch
+                                            var formData = new FormData();
+                                            // Rename the file before appending it to the FormData object
+                                            formData.append('file', passportFile.files[0], passport_name);
+
+                                            // Configure the fetch request
+                                            fetch('http://127.0.0.1:8000/rsvp/scan_passport/', {
+                                                method: 'POST',
+                                                body: formData
+                                            })
+                                                .then(function (response) {
+                                                    if (!response.ok) {
+                                                        // Request failed
+                                                        alert('Failed to upload file');
+                                                        console.error('Failed to upload file');
+                                                        reject('Failed to upload file');
+                                                    }
+                                                    // Parse JSON response
+                                                    return response.json();
+                                                })
+                                                .then(function (jsonResponse) {
+                                                    // Check if 'date of birth' exists in jsonResponse
+                                                    if (jsonResponse && jsonResponse['date of birth']) {
+                                                        // Extract and resolve the date of birth
+                                                        resolve(jsonResponse['date of birth']);
+                                                    } else {
+                                                        alert('Date of birth not found in the response');
+                                                        console.error('Date of birth not found in the response');
+                                                        reject('Date of birth not found in the response');
+                                                    }
+                                                })
+                                                .catch(function (error) {
+                                                    alert('Error occurred while uploading file:', error);
+                                                    console.error('Error occurred while uploading file:', error);
+                                                    reject(error);
+                                                });
+                                        } else {
+                                            alert('No passport image selected');
+                                            console.error('No passport image selected');
+                                            reject('No passport image selected');
+                                        }
+                                    });
+                                }
+
+                                // Function to compare date of birth from HTML input with date of birth returned from server
+                                function compareDatesOfBirth() {
+                                    return new Promise(function (resolve, reject) {
+                                        // Get the date of birth from the HTML input
+                                        var dateOfBirthInput = document.getElementById('date-of-birth').value;
+
+                                        console.log('Inputted DoB:', dateOfBirthInput);
+                                        // Call sendPassportToServer function to get the date of birth from server
+                                        sendPassportToServer()
+                                            .then(function (dateOfBirthServer) {
+                                                console.log('DoB from Passport:', dateOfBirthServer);
+                                                // Compare the dates
+                                                if (dateOfBirthInput === dateOfBirthServer) {
+                                                    console.log('Passport Info Matched:', dateOfBirthInput);
+                                                    // Resolve the promise if dates match
+                                                    resolve();
+                                                } else {
+                                                    alert('ERROR: Your form input data, and passport data does not match. \n\n Please provide correct information.');
+                                                    console.log('Date of Birth Mismatch');
+                                                    // Reject the promise if dates do not match
+                                                    reject('Date of Birth Mismatch');
+                                                }
+                                            })
+                                            .catch(function (error) {
+                                                alert('Error:', error);
+                                                console.error('Error:', error);
+                                                // Reject the promise if there is an error
+                                                reject(error);
+                                            });
+                                    });
+                                }
+                                // Function to generate and display QR code
+                                function generateAndDownloadQRCode(qrCodeData) {
+                                    // Log the size of the QR code data
+                                    console.log('Size of QR code data:', qrCodeData.length);
+                                    try {
+                                        // Create a new QR code instance
+                                        var qrCode = new QRCode("qrCodeDiv", {
+                                            text: qrCodeData,
+                                            width: 320,
+                                            height: 320,
+                                            colorDark: "#000000",
+                                            colorLight: "#ff66b2",
+                                            correctLevel: QRCode.CorrectLevel.L
+                                        });
+
+                                        console.log('QR code:', qrCode);
+                                        // Get QR code image data URL
+                                        var qrCodeDataURL = qrCode._el.childNodes[0].toDataURL('image/png');
+
+                                        // Create a temporary link element
+                                        var link = document.createElement('a');
+                                        link.href = qrCodeDataURL;
+                                        link.download = 'qr_code.png';
+
+                                        // Trigger the download
+                                        link.click();
+                                    } catch (error) {
+                                        // Handle the error
+                                        console.error('Error occurred while generating and downloading QR code:', error);
+                                        alert('Error occurred while generating and downloading QR code. Please try again.');
+                                    }
+                                }
+                                // Function to send RSVP data to the server
+                                function sendRSVP() {
+                                    return new Promise(function (resolve, reject) {
+                                        var firstName = document.getElementById('first-name').value;
+                                        var lastName = document.getElementById('last-name').value;
+                                        var email = document.getElementById('email').value;
+                                        var dateOfBirth = document.getElementById('date-of-birth').value;
+                                        var phone = document.getElementById('phone').value;
+                                        var gender = document.getElementById('gender').value;
+                                        var numberOfGuests = document.getElementById('guests').value;
+                                        var rsvp_date = document.getElementById('rsvp_date').value;
+                                        var rsvp_time = document.getElementById('rsvp_time').value;
+                                        var message = document.getElementById('message').value;
+
+                                        // Prepare RSVP data object
+                                        var rsvpData = {
+                                            first_name: firstName,
+                                            last_name: lastName,
+                                            email: email,
+                                            date_of_birth: dateOfBirth,
+                                            scanned_dob: dateOfBirth,
+                                            phone: phone,
+                                            gender: gender,
+                                            guests: numberOfGuests,
+                                            rsvp_date: rsvp_date,
+                                            rsvp_time: rsvp_time,
+                                            message: message,
+                                        };
+
+                                        // Configure the fetch request
+                                        fetch('http://127.0.0.1:8000/rsvp/create/', {
+                                            method: 'POST',
+                                            headers: {
+                                                'Content-Type': 'application/json'
+                                            },
+                                            body: JSON.stringify(rsvpData)
+                                        }).then(function (response) {
+                                            if (!response.ok) {
+                                                alert('Failed to send RSVP data');
+                                                console.error('Failed to send RSVP data');
+                                                throw new Error('Failed to send RSVP data');
+                                            }
+                                            return response.json()
+                                        }).then(function (jsonResponse) {
+                                            // Check if rsvp exists in jsonResponse
+                                            if (jsonResponse && jsonResponse.user_id) {
+                                                // Extract user data
+                                                var userData = {
+                                                    user_id: jsonResponse.user_id,
+                                                    first_name: jsonResponse.user.first_name,
+                                                    last_name: jsonResponse.user.last_name,
+                                                    email: jsonResponse.user.email,
+                                                    guests: jsonResponse.user.guests,
+                                                    rsvp_date: jsonResponse.user.rsvp_date,
+                                                    rsvp_time: jsonResponse.user.rsvp_time,
+                                                };
+
+                                                // Log the formatted user data
+                                                console.log('Formatted User Data:', userData);
+
+
+                                                // Convert user data to QR code
+                                                var qrCodeData = JSON.stringify(userData);
+                                                console.log('qrCodeData:', qrCodeData);
+                                                console.log('Starting QR funcion');
+                                                generateAndDownloadQRCode(qrCodeData);
+                                                console.log('Ended QR funcion');
+                                            } else {
+                                                alert('RSVP Not Found');
+                                                console.error('RSVP Not Found');
+                                                reject('RSVP Not Found');
+                                            }
+                                        }).catch(function (error) {
+                                            alert('Error occurred while sending RSVP data:', error);
+                                            console.error('Error occurred while sending RSVP data:', error);
+                                            reject(error);
+                                        });
+                                    });
+                                }
+
+                                function uploadProfilePic() {
+                                    return new Promise(function (resolve, reject) {
+                                        var facePic = document.getElementById('profile_pic');
+                                        if (facePic && facePic.src) {
+                                            // console.log("facePic File Type:", facePic.type); // This will always log 'undefined' for an img tag
+                                            var email = String(document.getElementById('email').value);
+                                            var phone = String(document.getElementById('phone').value);
+                                            var emailCleaned = email.replace(/\W+/g, "");
+                                            var phoneCleaned = phone.replace(/\W+/g, "");
+                                            var profile_pic_name = emailCleaned + "_" + phoneCleaned + ".png";
+                                            var src = facePic.src;
+
+                                            var imageData = src.split(',')[1];
+                                            var fileSize = Math.round((imageData.length * 3 / 4) / 1024); // Convert bytes to KB
+                                            console.log('Face Pic size:', fileSize, 'KB');
+
+                                            var blob = dataURItoBlob(imageData, 'image/png');
+
+                                            var formData = new FormData();
+                                            formData.append('file', blob, profile_pic_name);
+
+                                            fetch('http://127.0.0.1:8000/rsvp/upload_pro_pic/', {
+                                                method: 'POST',
+                                                body: formData
+                                            })
+                                                .then(function (response) {
+                                                    if (!response.ok) {
+                                                        alert('Failed to upload profile pic');
+                                                        console.error('Failed to upload profile pic');
+                                                        reject('Failed to upload profile pic');
+                                                    }
+                                                    return response.json();
+                                                })
+                                                .then(function (jsonResponse) {
+                                                    if (jsonResponse && jsonResponse['filename']) {
+                                                        resolve(jsonResponse['filename']);
+                                                    } else {
+                                                        alert('Filename not found in the response');
+                                                        console.error('Filename not found in the response');
+                                                        reject('Filename not found in the response');
+                                                    }
+                                                })
+                                                .catch(function (error) {
+                                                    alert('Error occurred while uploading file:', error);
+                                                    console.error('Error occurred while uploading file:', error);
+                                                    reject(error);
+                                                });
+                                        } else {
+                                            alert('No profile picture found');
+                                            console.error('No profile picture found');
+                                            reject('No profile picture found');
+                                        }
+                                    });
+                                }
+
+                                // Function to convert base64-encoded data to Blob object
+                                function dataURItoBlob(dataURI) {
+                                    var byteString = atob(dataURI);
+                                    var arrayBuffer = new ArrayBuffer(byteString.length);
+                                    var int8Array = new Uint8Array(arrayBuffer);
+                                    for (var i = 0; i < byteString.length; i++) {
+                                        int8Array[i] = byteString.charCodeAt(i);
+                                    }
+                                    return new Blob([int8Array], { type: 'image/jpeg' });
+                                }
+
+                                // Add event listener to the form submit button
+                                document.getElementById('book').addEventListener('click', function (event) {
+                                    event.preventDefault(); // Prevent default form submission behavior
+
+                                    // Check if names are valid
+                                    var passportFile = document.getElementById('passport_img').value;
+                                    if (passportFile == "") {
+                                        alert("Please upload passport");
+                                        return;
+                                    }
+
+                                    // Clear the session storage
+                                    sessionStorage.clear();
+
+                                    compareDatesOfBirth().then(function () {
+                                        // After compareDatesOfBirth completes successfully, call sendRSVP
+                                        sendRSVP();
+                                    }).then(function () {
+                                        // After sendRSVP completes successfully and returns qr data, call generateAndDownloadQRCode
+                                        // generateAndDownloadQRCode(qr);
+
+                                        console.log("Starting pic upload:");
+                                        // Call uploadProfilePic
+                                        uploadProfilePic();
+                                    }).then(function () {
+                                        // After uploadProfilePic completes successfully, show success message
+                                        alert("\nSUCCESS: Your RSVP is complete. \nPlease view the downloaded ticket");
+                                    }).catch(function (error) {
+                                        // Handle errors
+                                        console.error('Error occurred:', error);
+                                        alert('An error occurred. Please try again.');
+                                    });
+                                });
+
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- End Contact Area -->
+
+    <!-- Start Contact
+    ============================================= -->
+    <div class="top-entry-area bg-gray text-center">
+        <div class="container">
+            <div class="row">
+                <div class="item-box">
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h4>Location</h4>
+                            <p>
+                                Taylor's University, Selangor, Petaling Jaya.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <i class="fas fa-phone"></i>
+                            <h4>Customer Service</h4>
+                            <h2>+123 456 7890</h2>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <i class="fas fa-envelope-open"></i>
+                            <h4>Email</h4>
+                            <p>
+                                LeSoiree@gmail.com<br>LeSoiree_Admin@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+            </div>
+        </div>
+
+        <!--Thank You-->
+
+        <!-- jQuery Frameworks
+    ============================================= -->
+        <script src="assets/js/jquery-1.12.4.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/equal-height.min.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/jquery.easing.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/modernizr.custom.13711.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/js/count-to.js"></script>
+        <script src="assets/js/YTPlayer.min.js"></script>
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <script src="assets/js/bootsnav.js"></script>
+        <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
